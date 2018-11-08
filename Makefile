@@ -6,14 +6,17 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/08 15:32:07 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/08 18:21:34 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = 
-INCLUDES = 
+SRCS = ft_memset.c /
+	ft_bzero.c /
+	ft_memcpy.c
+
+INCLUDES = libft.h
 
 OBJS = $(SRCS:.c=.o)
 
