@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:49:45 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/08 17:17:35 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/08 18:09:36 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		((char*)b)[i] = c;
+		((unsigned char*)b)[i] = (unsigned char)c;
 		i++;
 	}
 	return (b);
