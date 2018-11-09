@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 10:40:04 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/09 10:55:12 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/09 10:58:29 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 			i++;
 		return (temps1[i] - temps2[i]);
 	}
+	return (0);
 }
