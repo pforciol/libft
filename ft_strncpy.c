@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 18:11:24 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/10 18:30:17 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/12 14:45:00 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
 	while (i < len)
 	{
-		i++;
 		dst[i] = '\0';
+		i++;
 	}
 	return (dst);
 }
