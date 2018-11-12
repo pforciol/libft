@@ -6,7 +6,7 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/12 18:15:56 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/13 00:03:49 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,9 @@ SRCS = 	ft_memset.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strstr.c \
-		ft_strnstr.c
+		ft_strnstr.c \
+		ft_strcmp.c \
+		ft_strncmp.c
 
 INCLUDES = libft.h
 
