@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 12:32:35 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 15:47:00 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/13 15:05:26 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/13 15:08:46 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_tolower(int c)
 {
-	int		res;
-	int		i;
-	int		sign;
-
-	res = 0;
-	i = 0;
-	sign = 1;
-	while (ft_isspace(str[i]) == 1)
-		i++;
-	if (str[i] != '+' && str[i] != '-' && ft_isdigit(str[i]) == 0)
-		return (0);
-	if (str[i] == '-')
-		sign = -1;
-	if (ft_isdigit(str[i]) == 0)
-		i++;
-	while (ft_isdigit(str[i]) == 1)
-	{
-		res = res * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign * res);
+	return (ft_isupper(c) == 1 ? c + 32 : c);
 }
