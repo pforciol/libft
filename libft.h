@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 14:30:09 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/13 15:27:41 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 
+//FIRST PART
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -43,6 +44,13 @@ int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
+
+//SECOND PART
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
 
 //Fonctions en plus
 int		ft_isspace(int c);

@@ -6,11 +6,12 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/13 14:30:20 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/13 16:49:33 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+CC = gcc
 
 SRCS = 	ft_memset.c \
 		ft_bzero.c \
@@ -38,6 +39,11 @@ SRCS = 	ft_memset.c \
 		ft_isalnum.c \
 		ft_isascii.c \
 		ft_isprint.c \
+		ft_toupper.c \
+		ft_tolower.c \
+		ft_memalloc.c \
+		ft_memdel.c \
+		ft_strnew.c \
 		ft_isupper.c \
 		ft_islower.c \
 		ft_isspace.c
@@ -48,8 +54,7 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME):
-	gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $(SRCS)
+$(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
