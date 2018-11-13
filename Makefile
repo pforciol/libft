@@ -6,7 +6,7 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/13 16:49:33 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/13 23:37:44 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,8 @@ SRCS = 	ft_memset.c \
 		ft_memalloc.c \
 		ft_memdel.c \
 		ft_strnew.c \
+		ft_strdel.c \
+		ft_strclr.c \
 		ft_isupper.c \
 		ft_islower.c \
 		ft_isspace.c
