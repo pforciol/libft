@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 23:49:53 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 12:30:55 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/13 13:57:22 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/13 13:57:55 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		ft_isalnum(int c)
 {
-	return (ft_strncmp(s1, s2, ft_strlen(s1) + 1));
+	if (ft_isalpha(c) == 1 || ft_isdigit(c))
+		return (1);
+	return (0);
 }

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 23:49:53 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 12:30:55 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/13 14:10:32 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/13 14:11:00 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		ft_isprint(int c)
 {
-	return (ft_strncmp(s1, s2, ft_strlen(s1) + 1));
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
