@@ -6,12 +6,14 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/13 23:37:44 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/14 17:22:25 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
+OBJS = $(SRCS:.c=.o)
+INCLUDES = libft.h
 
 SRCS = 	ft_memset.c \
 		ft_bzero.c \
@@ -46,17 +48,24 @@ SRCS = 	ft_memset.c \
 		ft_strnew.c \
 		ft_strdel.c \
 		ft_strclr.c \
+		ft_striter.c \
+		ft_striteri.c \
+		ft_strmap.c \
+		ft_strmapi.c \
+		ft_strequ.c \
+		ft_strnequ.c \
+		ft_strsub.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
+		ft_strsplit.c \
 		ft_isupper.c \
 		ft_islower.c \
 		ft_isspace.c
 
-INCLUDES = libft.h
-
-OBJS = $(SRCS:.c=.o)
-
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(SRCS)
+	gcc -Wall -Wextra -Werror -I $(INCLUDES) -c $(SRCS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
