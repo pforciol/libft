@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 09:16:19 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/10 15:18:35 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:07:59 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,20 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *tmp;
+	size_t		i;
 
-	if (!(tmp = malloc(sizeof(char) * len)))
-		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
+	i = 0;
+	if (src > dst)
+	{
+		ft_memcpy(dst, src, len);
+	}
+	else
+	{
+		while (len > 0)
+		{
+			len--;
+			((char*)dst)[len] = ((const char*)src)[len];
+		}
+	}
 	return (dst);
 }

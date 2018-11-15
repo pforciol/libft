@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 15:22:45 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 15:25:56 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/15 18:06:01 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	free(*ap);
-	*ap = NULL;
+	if (ap != NULL)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
 }
