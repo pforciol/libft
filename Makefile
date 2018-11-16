@@ -6,14 +6,13 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/16 16:05:52 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/16 17:40:10 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
 OBJS = $(SRCS:.c=.o)
-INCLUDES = libft.h
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = 	ft_memset.c \
@@ -82,8 +81,7 @@ SRCS = 	ft_memset.c \
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
