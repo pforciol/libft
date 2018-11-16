@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:04:37 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/14 17:15:56 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/16 08:41:16 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	**ft_strsplit(char const *s, char c)
 	int		j;
 	int		k;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	j = 0;
 	if (!(tab = malloc(sizeof(char*) * (ft_countwords(s, c) + 1))))

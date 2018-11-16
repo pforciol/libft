@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 17:21:44 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/15 18:35:17 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/16 08:24:38 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 	char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s) - 1;
 	while ((s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
@@ -28,10 +30,9 @@ char	*ft_strtrim(char const *s)
 		end--;
 	if (end == 0)
 		return (ft_strnew(0));
-	len = end - start + 2;
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	len = end - start + 1;
+	if (!(str = ft_strsub(s, start, len)))
 		return (NULL);
-	str = ft_strsub(s, start, len);
-	str[len - 1] = '\0';
+	str[len] = '\0';
 	return (str);
 }

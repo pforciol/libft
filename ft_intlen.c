@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 13:41:27 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 10:04:53 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/16 10:02:18 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/16 10:02:27 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int c)
+int		ft_intlen(long n)
 {
-	if (c >= 'A' && c <= 'Z')
+	int len;
+
+	len = 0;
+	if (n == 0)
 		return (1);
-	return (0);
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }

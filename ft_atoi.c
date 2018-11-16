@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 12:32:35 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 15:47:00 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/16 10:00:46 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int		res;
-	int		i;
-	int		sign;
+	int	res;
+	int	i;
+	int	sign;
 
 	res = 0;
 	i = 0;

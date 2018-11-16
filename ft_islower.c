@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:44:53 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/13 13:45:10 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/16 10:04:47 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
-		return 1;
+		return (1);
 	return (0);
 }
