@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 18:15:15 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 17:09:09 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/16 14:54:26 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/16 15:19:33 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hstck, const char *ndl, size_t n)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	size_t i;
-	size_t j;
-
-	i = 0;
-	if (ft_strlen(ndl) == 0)
-		return ((char*)hstck);
-	while (hstck[i] != '\0' && i <= n)
+	if (alst != NULL && new != NULL)
 	{
-		j = 0;
-		while (hstck[i + j] == ndl[j] && (i + j) < n)
-		{
-			j++;
-			if (ndl[j] == '\0')
-				return ((char*)hstck + i);
-		}
-		i++;
+		new->next = *alst;
+		*alst = new;
 	}
-	return (NULL);
 }

@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 18:15:15 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 17:09:09 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/16 15:20:12 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/16 16:57:34 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hstck, const char *ndl, size_t n)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	size_t i;
-	size_t j;
-
-	i = 0;
-	if (ft_strlen(ndl) == 0)
-		return ((char*)hstck);
-	while (hstck[i] != '\0' && i <= n)
+	if (lst != NULL && f != NULL)
 	{
-		j = 0;
-		while (hstck[i + j] == ndl[j] && (i + j) < n)
+		while (lst != NULL)
 		{
-			j++;
-			if (ndl[j] == '\0')
-				return ((char*)hstck + i);
+			(*f)(lst);
+			lst = lst->next;
 		}
-		i++;
 	}
-	return (NULL);
 }

@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 18:15:15 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 17:09:09 by pforciol         ###   ########.fr       */
+/*   Created: 2018/11/16 14:22:10 by pforciol          #+#    #+#             */
+/*   Updated: 2018/11/16 14:53:58 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hstck, const char *ndl, size_t n)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	size_t i;
-	size_t j;
+	t_list *tmp;
 
-	i = 0;
-	if (ft_strlen(ndl) == 0)
-		return ((char*)hstck);
-	while (hstck[i] != '\0' && i <= n)
+	if (alst != NULL && del != NULL)
 	{
-		j = 0;
-		while (hstck[i + j] == ndl[j] && (i + j) < n)
+		while (*alst != NULL)
 		{
-			j++;
-			if (ndl[j] == '\0')
-				return ((char*)hstck + i);
+			del((*alst)->content, (*alst)->content_size);
+			tmp = (*alst)->next;
+			free(*alst);
+			*alst = tmp;
 		}
-		i++;
+		*alst = NULL;
 	}
-	return (NULL);
 }
