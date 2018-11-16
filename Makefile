@@ -6,7 +6,7 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/15 14:04:38 by pforciol         ###   ########.fr        #
+#    Updated: 2018/11/16 10:03:16 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,7 @@ SRCS = 	ft_memset.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_strsplit.c \
+		ft_itoa.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putendl.c \
@@ -69,7 +70,8 @@ SRCS = 	ft_memset.c \
 		ft_putnbr_fd.c \
 		ft_isupper.c \
 		ft_islower.c \
-		ft_isspace.c
+		ft_isspace.c \
+		ft_intlen.c
 
 all: $(NAME)
 
