@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 17:40:46 by pforciol         ###   ########.fr       */
+/*   Updated: 2018/11/19 09:59:15 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,10 @@ int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 int					ft_intlen(long n);
+int					ft_isblank(int c);
+int					ft_iscntrl(int c);
+int					ft_isgraph(int c);
+int					ft_ispunct(int c);
+int					ft_isxdigit(int c);
 
 #endif
