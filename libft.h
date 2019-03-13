@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/13 11:51:19 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/13 13:01:39 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+
+# define BUFF_SIZE 32
+# define SUCCESS 1
+# define ERROR -1
+# define END 0
 
 typedef struct		s_list
 {
@@ -94,5 +99,8 @@ int					ft_iscntrl(int c);
 int					ft_isgraph(int c);
 int					ft_ispunct(int c);
 int					ft_isxdigit(int c);
+
+int					get_next_line(const int fd, char **line);
+char				**ft_split_whitespaces(char *str);
 
 #endif

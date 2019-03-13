@@ -6,11 +6,11 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 11:52:33 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/13 11:51:26 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/13 12:58:30 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int		gnl_read(const int fd, char **str)
 {

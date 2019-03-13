@@ -6,7 +6,7 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2018/11/19 10:00:03 by pforciol         ###   ########.fr        #
+#    Updated: 2019/03/13 12:57:52 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,9 @@ SRCS = 	ft_memset.c \
 		ft_iscntrl.c \
 		ft_isgraph.c \
 		ft_ispunct.c \
-		ft_isxdigit.c
+		ft_isxdigit.c \
+		get_next_line.c \
+		ft_split_whitespaces.c
 
 all: $(NAME)
 
