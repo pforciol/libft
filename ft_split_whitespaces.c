@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 12:08:30 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/13 13:01:21 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/16 00:22:51 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ static int	ft_word_length(char *str, int i)
 	}
 	return (length);
 }
-
 
 char		**ft_split_whitespaces(char *str)
 {
