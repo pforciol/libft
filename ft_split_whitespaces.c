@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 19:26:20 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/16 01:20:06 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/16 01:24:51 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int		ft_count_words(char *str)
 {
-	int i;
-	int in_word;
-	int count;
+	int	i;
+	int	in_word;
+	int	count;
 
 	i = 0;
 	in_word = 0;
@@ -39,7 +39,7 @@ static int		ft_count_words(char *str)
 
 static int		ft_word_length(char *str, int i)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	while (str[i] != ' ' && str[i] != '\n' && str[i] != '\t'
@@ -51,7 +51,7 @@ static int		ft_word_length(char *str, int i)
 	return (length);
 }
 
-char	**ft_split_whitespaces(char *str)
+char			**ft_split_whitespaces(char *str)
 {
 	char	**words;
 	int		i;
