@@ -6,12 +6,12 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2019/03/13 12:57:52 by pforciol         ###   ########.fr        #
+#    Updated: 2019/03/16 01:27:31 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = @gcc
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 
@@ -88,12 +88,12 @@ SRCS = 	ft_memset.c \
 all: $(NAME)
 
 $(NAME):$(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
