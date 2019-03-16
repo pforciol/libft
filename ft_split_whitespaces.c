@@ -6,13 +6,13 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 19:26:20 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/16 01:18:43 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/16 01:20:06 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_words(char *str)
+static int		ft_count_words(char *str)
 {
 	int i;
 	int in_word;
@@ -37,7 +37,7 @@ int		ft_count_words(char *str)
 	return (count);
 }
 
-int		ft_word_length(char *str, int i)
+static int		ft_word_length(char *str, int i)
 {
 	int length;
 
