@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/13 13:01:39 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/03/19 12:21:35 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int					ft_isxdigit(int c);
 
 int					get_next_line(const int fd, char **line);
 char				**ft_split_whitespaces(char *str);
+int					ft_atoi_base(const char *str, char *base);
 
 #endif
