@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 12:06:43 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 08:34:16 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/04/17 12:14:01 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	int i;
-
-	if (s != NULL)
-	{
-		i = 0;
-		while (s[i] != '\0')
-			ft_putchar(s[i++]);
-	}
+	write(1, s, ft_strlen(s));
 }
