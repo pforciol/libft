@@ -6,7 +6,7 @@
 #    By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 15:27:25 by pforciol          #+#    #+#              #
-#    Updated: 2019/03/19 11:52:01 by pforciol         ###   ########.fr        #
+#    Updated: 2019/04/17 11:04:32 by pforciol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,10 +88,12 @@ SRCS = 	ft_memset.c \
 
 all: $(NAME)
 
-$(NAME):$(OBJS)
+$(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
+	@echo "\033[90mCOMPILATION	 \033[92m>>\033[39m libft has been compiled"
 
 clean:
+	@echo "\033[90mSUPPRESSION	 \033[91m>>\033[39m libft has been removed"
 	@rm -f $(OBJS)
 
 fclean: clean
