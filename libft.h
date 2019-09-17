@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2019/03/19 12:21:35 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/09/09 11:21:33 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,22 @@
 # define SUCCESS 1
 # define ERROR -1
 # define END 0
+
+# define MAX(A, B) (((A) > (B)) ? (A) : (B))
+# define MIN(A, B) (((A) < (B)) ? (A) : (B))
+
+# define WHITE "\033[37m"
+# define BLACK "\033[30m"
+# define GREEN "\033[32m"
+# define CYAN "\033[36m"
+# define PURPLE "\033[35m"
+# define BLUE "\033[34m"
+# define YELLOW "\033[33m"
+# define RED "\033[31m"
+# define BG_CYAN "\033[46m"
+# define BG_YELLOW "\033[43m"
+# define BOLD "\033[1m"
+# define RESET "\033[0m"
 
 typedef struct		s_list
 {
@@ -99,6 +115,7 @@ int					ft_iscntrl(int c);
 int					ft_isgraph(int c);
 int					ft_ispunct(int c);
 int					ft_isxdigit(int c);
+void				ft_putnstr(char const *s, int len);
 
 int					get_next_line(const int fd, char **line);
 char				**ft_split_whitespaces(char *str);

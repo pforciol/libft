@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:40:04 by pforciol          #+#    #+#             */
-/*   Updated: 2019/06/10 14:00:03 by pforciol         ###   ########.fr       */
+/*   Created: 2019/07/18 16:00:46 by pforciol          #+#    #+#             */
+/*   Updated: 2019/07/18 16:00:47 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putnstr(char const *s, int len)
 {
-	size_t				i;
-	const unsigned char	*s12;
-	const unsigned char	*s22;
-
-	s12 = s1;
-	s22 = s2;
-	i = 0;
-	while (i < n)
-	{
-		if (s12[i] != s22[i] || s12[i] == '\0' || s22[i] == '\0')
-			return (s12[i] - s22[i]);
-		i++;
-	}
-	return (0);
+	write(1, s, len);
 }
