@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 14:04:37 by pforciol          #+#    #+#             */
-/*   Updated: 2018/11/16 17:03:02 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/10/17 15:51:20 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char			**ft_strsplit(char const *s, char c)
 		k = 0;
 		while (s[i] == c)
 			i++;
-		if (!(tab[j] = malloc(sizeof(char) * ft_countchars(s, c, i))))
+		if (!(tab[j] = malloc(sizeof(char) * ft_countchars(s, c, i) + 1)))
 			return (NULL);
 		while (s[i] != c && s[i] != '\0')
 			tab[j][k++] = s[i++];

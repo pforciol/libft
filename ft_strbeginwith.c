@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strbeginwith.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:05:46 by pforciol          #+#    #+#             */
-/*   Updated: 2019/11/19 13:54:47 by pforciol         ###   ########.fr       */
+/*   Created: 2019/10/18 14:18:01 by pforciol          #+#    #+#             */
+/*   Updated: 2019/11/19 13:59:58 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int			ft_strbeginwith(char *str, char *begin)
 {
-	int count;
+	int		i;
 
-	count = 0;
-	while (s[count])
+	i = 0;
+	while (begin[i])
 	{
-		count++;
+		if (str[i] != begin[i])
+			return (0);
+		i++;
 	}
-	return (count);
+	return (1);
 }

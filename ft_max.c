@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_max.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:05:46 by pforciol          #+#    #+#             */
-/*   Updated: 2019/11/19 13:54:47 by pforciol         ###   ########.fr       */
+/*   Created: 2019/12/03 16:22:09 by pforciol          #+#    #+#             */
+/*   Updated: 2019/12/03 16:29:00 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int		ft_max(int a, int b)
 {
-	int count;
-
-	count = 0;
-	while (s[count])
-	{
-		count++;
-	}
-	return (count);
+	return (((a) > (b)) ? (a) : (b));
 }

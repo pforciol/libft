@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_freearray.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:05:46 by pforciol          #+#    #+#             */
-/*   Updated: 2019/11/19 13:54:47 by pforciol         ###   ########.fr       */
+/*   Created: 2019/10/18 11:12:57 by pforciol          #+#    #+#             */
+/*   Updated: 2019/11/04 15:17:29 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void		ft_freearray(char **commands)
 {
-	int count;
+	int		i;
 
-	count = 0;
-	while (s[count])
-	{
-		count++;
-	}
-	return (count);
+	if (!commands)
+		return ;
+	i = 0;
+	while (commands && commands[i])
+		free(commands[i++]);
+	if (commands)
+		free(commands);
 }

@@ -6,7 +6,7 @@
 /*   By: pforciol <pforciol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:37:17 by pforciol          #+#    #+#             */
-/*   Updated: 2019/09/09 11:21:33 by pforciol         ###   ########.fr       */
+/*   Updated: 2019/12/03 16:28:03 by pforciol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 # define SUCCESS 1
 # define ERROR -1
 # define END 0
-
-# define MAX(A, B) (((A) > (B)) ? (A) : (B))
-# define MIN(A, B) (((A) < (B)) ? (A) : (B))
 
 # define WHITE "\033[37m"
 # define BLACK "\033[30m"
@@ -120,5 +117,13 @@ void				ft_putnstr(char const *s, int len);
 int					get_next_line(const int fd, char **line);
 char				**ft_split_whitespaces(char *str);
 int					ft_atoi_base(const char *str, char *base);
+void				*ft_realloc(void *ptr, size_t cur_size, size_t new_size);
+char				*ft_re_strjoin(char *s1, char *s2);
+char				*ft_strjoin_ch(char const *s1, char c);
+char				*ft_re_strjoin_ch(char *s1, char c);
+void				ft_freearray(char **commands);
+int					ft_strbeginwith(char *str, char *begin);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
 
 #endif
